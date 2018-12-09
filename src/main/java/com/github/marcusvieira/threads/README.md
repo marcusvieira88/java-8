@@ -12,11 +12,11 @@ Parallelism – Many tasks in more than one processor.
 
 #### Mutual Exclusion
 	Granularity
-		coarse-grained granularity – big tasks with low intercomunication(low overhead in t		he synchronization).
-		fine-grained granularity – small tasks with high communication(high overhead in t		he synchronization).
+		coarse-grained granularity – big tasks with low intercomunication(low overhead in the synchronization).
+		fine-grained granularity – small tasks with high communication(high overhead in the synchronization).
 	Synchronization Mechanisms
-		Semaphore – control the access to one or more units of a resources, it has a variable 		that store the number of resources that can be used and two atomic variables to 			manage the value of the variable(a mutex that store only two values, resource is free 		or busy), only the task that sets the resource to busy can released it.
-		Monitor – Get a mutal exclusion over a shared resource, it has a mutex(conditional 		variable) and two operations for wait the condition and signal the condition. Once 		you signal the condition, only one task that is waiting for the condition can go to 			execution.
+		Semaphore – control the access to one or more units of a resources, it has a variable that store the number of resources that can be used and two atomic variables to 			manage the value of the variable(a mutex that store only two values, resource is free 		or busy), only the task that sets the resource to busy can released it.
+		Monitor – Get a mutal exclusion over a shared resource, it has a mutex(conditional variable) and two operations for wait the condition and signal the condition. Once 		you signal the condition, only one task that is waiting for the condition can go to 			execution.
 
 #### Immutable Object
     Value never change
@@ -36,7 +36,6 @@ Parallelism – Many tasks in more than one processor.
     Priority Inversion – task with low priority holds a resource that is needed for the hiw priority task.
 
 #### Design concurrency algorithms
-
     Start with a sequencial version of the algorithm
     1 – Analyze the code and find the parts that can be run in parallel
     2 – Design the new algorithm, using:
@@ -89,7 +88,6 @@ Parallelism – Many tasks in more than one processor.
 	Lambda Expressions: used to implements a compact version of methods.
 
 #### Concurrent Data Structures (Blocking and non-blocking data structure)
-
 	ConcurrentLinkedDeque – non-blocking list.
 	ConcurrentLinkedQueue – non-blocking queue.
 	LinkedBlockingDeque – blocking list.
@@ -101,7 +99,6 @@ Parallelism – Many tasks in more than one processor.
 	LongAdder and DoubleAdder
 
 #### Concurrency Design Patterns:
-
 	Singleton and 	Factory are most common.
 	Signaling (ReentrantLock or Semaphore or wait and notify methods).
 	Rendezvous (generalization of Signaling)

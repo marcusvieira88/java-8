@@ -12,8 +12,10 @@ Parallelism – Many tasks in more than one processor.
 
 #### Mutual Exclusion
 	Granularity
-		coarse-grained granularity – big tasks with low intercomunication(low overhead in the synchronization).
-		fine-grained granularity – small tasks with high communication(high overhead in the synchronization).
+		coarse-grained granularity – big tasks with low intercomunication
+		    (low overhead in the synchronization).
+		fine-grained granularity – small tasks with high communication
+		    (high overhead in the synchronization).
 	Synchronization Mechanisms
 		Semaphore – control the access to one or more units of a resources,
 		    it has a variable that store the number of resources that can
@@ -70,16 +72,21 @@ Parallelism – Many tasks in more than one processor.
 	Lock interface:
 		ReentrantLock – lock associated with a condition.
 		ReentrantReadWriteLock – separates the reads and writes operations.
-		StampedLock – new feature of java 8 , that includes three modes for controlling 			read \ write access.
+		StampedLock – new feature of java 8 , that includes three modes for controlling
+		    read \ write access.
 	Semaphore class: implements the classical semaphore synchronization.
-	CountDownLatch class: class that alows a task to wait for a finalization of multiple 	operations.
-	CyclicBarrier class: class that allows the synchronization of multiple threads in a common 	point.
+	CountDownLatch class: class that alows a task to wait for a finalization of
+	    multiple operations.
+	CyclicBarrier class: class that allows the synchronization of multiple threads
+	    in a common point.
 	Phaser class: class that allows you to control the execution divided into phases.
 
 #### Executors
 	Executor and ExecutorService interfaces: they include common methods for all executors.
-	ThreadPoolExecutor class: this class alow you to get a executor with a pool of threads and 	optionally define a maximum number of parallel tasks.
-	ScheduledThreadPoolExecutor: This class allow you to execute a executor after a delay or 	periodically.
+	ThreadPoolExecutor class: this class alow you to get a executor with a pool of threads
+	    and optionally define a maximum number of parallel tasks.
+	ScheduledThreadPoolExecutor: This class allow you to execute a executor after a delay
+	    or periodically.
 	Executors: Class that facilites the executor creation.
 	Callable interface: This a alternative to runnable interface and RETURN a value.
 	Future interface: it includes methods to obtain and return values of a Callable interface.
@@ -88,7 +95,8 @@ Parallelism – Many tasks in more than one processor.
 	Defines a special executor that solve problems with a divicde and conquer technique.
 	ForkJoinPool: This is a class that implements the executor that is going to run the tasks.
 	ForkJoinTask: This is a task that can be executed in the ForkJoinPool.
-	ForkJoinWorkerThread: this is a thread that is going to execute tasks in the ForkJoinPool 	class.
+	ForkJoinWorkerThread: this is a thread that is going to execute tasks in the
+	    ForkJoinPool class.
 
 #### Parallel Streams
 	Stream interface: that defines all the operations that you can execute in a stream.
@@ -111,9 +119,12 @@ Parallelism – Many tasks in more than one processor.
 	Singleton and 	Factory are most common.
 	Signaling (ReentrantLock or Semaphore or wait and notify methods).
 	Rendezvous (generalization of Signaling)
-	Mutex (implements a critical section with synchronized keyword, ReentrantLock or 	Semaphore class)
-	Multiplex (generalization of Mutex implements with Semaphore class, when you have a 	many copis of the resource and you want to set a number of tasks that can execute).
-	Barrier (the tasks can not continue while all the tasks not arrived in the same point, 	implements with CyclicBarrier class).
+	Mutex (implements a critical section with synchronized keyword, ReentrantLock or
+	    Semaphore class)
+	Multiplex (generalization of Mutex implements with Semaphore class, when you have a
+	    many copis of the resource and you want to set a number of tasks that can execute).
+	Barrier (the tasks can not continue while all the tasks not arrived in the same point,
+	    implements with CyclicBarrier class).
 	Double-Checked locking (Singleton classes that have problem in the initialization)
 	Read-Write Lock (implements with ReentrantReadWriteLock).
 
@@ -121,7 +132,8 @@ Parallelism – Many tasks in more than one processor.
 	Creates the threads , it is implemented with ExecutorService interface.
 
 #### ThreadLocal storage
-	Defines how to use global and static variables locally to tasks, implements with ThreadLocal 	class.
+	Defines how to use global and static variables locally to tasks, implements
+    with ThreadLocal class.
 
 #### The Java memory model
 	It defines the behavior of volatile, sinchronized and final keyworks.
@@ -139,4 +151,5 @@ Parallelism – Many tasks in more than one processor.
 	Using atomic variable instead of synchronization
 	Holding locks for as short time as possible
 	Taking precautions using Lazy initialization
-	Avoiding the use of blocking operations inside a critical section(don’t execute I\O for 	example)
+	Avoiding the use of blocking operations inside a critical section
+	    (don’t execute I\O for example)
